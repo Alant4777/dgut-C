@@ -33,6 +33,8 @@ struct User
 	size_t work;
 	//年龄
 	size_t age;
+	//时间
+	size_t time;
 	//工资
 	Wages* wages;
 	//最后工资
@@ -58,7 +60,6 @@ unsigned long long getMangerMoney(User* __wages)
 	return 8000 + __wages->age * 35;
 }
 
-
 //技术员工资计算
 unsigned long long getWokersMoney(User* __wages)
 {
@@ -71,5 +72,5 @@ unsigned long long getWokersMoney(User* __wages)
 unsigned long long getSaleMangerMoney(User* __wages)
 {
 	unsigned long long total_sales;
-return 8000 + total_sales * 0.005 + user->age * 35;
+    return 8000 + total_sales * 0.005 + __wages->age * 35;
 }
