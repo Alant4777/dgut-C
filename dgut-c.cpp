@@ -65,3 +65,8 @@ unsigned long long getMangerMoney(User* __wages)
 
 
 //小时经理工资计算
+unsigned long long getSaleMangerMoney(User* __wages)
+{
+    unsigned long long total_sales;
+    return 8000 + total_sales * 0.005 + __wages->age * 35;
+}
