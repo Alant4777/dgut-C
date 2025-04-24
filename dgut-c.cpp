@@ -33,6 +33,8 @@ struct User
 	size_t work;
 	//年龄
 	size_t age;
+	//时间
+	size_t time;
 	//工资
 	Wages* wages;
 	//最后工资
@@ -56,11 +58,14 @@ struct Department
 unsigned long long getMangerMoney(User* __wages)
 {
 	return 8000 + __wages->age * 35;
-}//经理底薪为8k，以后每从事一年工资增长35元（该部分由张家朗完成）
+}
 
 
 //技术员工资计算
-
+unsigned long long getWokersMoney(User* __wages)
+{
+	return 100*__wages->time + __wages->age * 35;
+}
 //销售员工资计算
 
 
